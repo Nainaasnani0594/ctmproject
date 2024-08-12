@@ -13,7 +13,6 @@ class Project extends Model
     use HasFactory;
 
     public $appends = ['months'];
-
     protected $fillable = [
         'sponsor_name',
         'project_name',

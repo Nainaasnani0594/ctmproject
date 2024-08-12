@@ -24,7 +24,6 @@ onMounted(() => {
             <nav class="bg-white border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <ul>
-                    <li v-if="userRole === 'admin'"><Link :href="route('admin.dashboard')">Admin Dashboard</Link></li>
                     <li v-if="userRole === 'user'"><Link :href="route('user.dashboard')">User Dashboard</Link></li>
                     <!-- Other links -->
                 </ul>
@@ -48,9 +47,6 @@ onMounted(() => {
                                 </NavLink>
                                 <NavLink :href="route('projects.index')" :active="route().current('projects.index')">
                                     Projects
-                                </NavLink>
-                                <NavLink :href="route('projects.create')" :active="route().current('projects.create')">
-                                    Create Project
                                 </NavLink>
                                 <NavLink :href="route('overview.index')" :active="route().current('overview.index')">
                                     Overview Project
@@ -141,9 +137,6 @@ onMounted(() => {
                         <ResponsiveNavLink :href="route('projects.index')" :active="route().current('projects.index')">
                             Projects
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('projects.create')" :active="route().current('projects.create')">
-                            Create Project
-                        </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('overview.index')" :active="route().current('overview.index')">
                             Create Project
                         </ResponsiveNavLink>
@@ -182,4 +175,3 @@ onMounted(() => {
         </div>
     </div>
 </template>
-
